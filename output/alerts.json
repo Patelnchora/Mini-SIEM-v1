@@ -1,0 +1,117 @@
+[
+  {
+    "timestamp": "2026-01-15T06:13:12",
+    "source_ip": "192.168.1.50",
+    "event_type": "MULTI_VECTOR_ATTACK",
+    "severity": "CRITICAL",
+    "threat_score": 100,
+    "abuse_score": 39,
+    "country": "CN",
+    "isp": "Mock ISP (no API key)",
+    "risk_classification": "CLEAN",
+    "verdict": "HIGH CONFIDENCE THREAT",
+    "details": {
+      "failed_login_attempts": 12,
+      "targeted_users": [
+        "root",
+        "ubuntu",
+        "admin"
+      ],
+      "correlated_signals": [
+        "BRUTE_FORCE",
+        "IP_FREQUENCY_SPIKE"
+      ],
+      "total_events": 12
+    }
+  },
+  {
+    "timestamp": "2026-01-15T06:15:23",
+    "source_ip": "185.220.101.42",
+    "event_type": "MULTI_VECTOR_ATTACK",
+    "severity": "CRITICAL",
+    "threat_score": 100,
+    "abuse_score": 8,
+    "country": "NL",
+    "isp": "Mock ISP (no API key)",
+    "risk_classification": "CLEAN",
+    "verdict": "HIGH CONFIDENCE THREAT",
+    "details": {
+      "failed_login_attempts": 12,
+      "targeted_users": [
+        "backup",
+        "user",
+        "www-data",
+        "test",
+        "postgres",
+        "git",
+        "docker",
+        "oracle",
+        "ftpuser",
+        "admin",
+        "deploy",
+        "jenkins"
+      ],
+      "correlated_signals": [
+        "BRUTE_FORCE",
+        "IP_FREQUENCY_SPIKE"
+      ],
+      "total_events": 12
+    }
+  },
+  {
+    "timestamp": "2026-01-15T07:05:20",
+    "source_ip": "203.0.113.77",
+    "event_type": "BRUTE_FORCE",
+    "severity": "CRITICAL",
+    "threat_score": 64,
+    "abuse_score": 30,
+    "country": "Unknown",
+    "isp": "Mock ISP (no API key)",
+    "risk_classification": "CLEAN",
+    "verdict": "BRUTE FORCE CONFIRMED",
+    "details": {
+      "failed_login_attempts": 6,
+      "targeted_users": [
+        "pi",
+        "ubuntu"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-01-15T08:00:06",
+    "source_ip": "198.51.100.200",
+    "event_type": "BRUTE_FORCE",
+    "severity": "CRITICAL",
+    "threat_score": 57,
+    "abuse_score": 91,
+    "country": "Unknown",
+    "isp": "Mock ISP (no API key)",
+    "risk_classification": "MALICIOUS",
+    "verdict": "CONFIRMED MALICIOUS",
+    "details": {
+      "failed_login_attempts": 3,
+      "targeted_users": [
+        "root"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-01-15T06:30:15",
+    "source_ip": "10.10.10.99",
+    "event_type": "BRUTE_FORCE",
+    "severity": "HIGH",
+    "threat_score": 36,
+    "abuse_score": 4,
+    "country": "RU",
+    "isp": "Mock ISP (no API key)",
+    "risk_classification": "CLEAN",
+    "verdict": "BRUTE FORCE ATTEMPT",
+    "details": {
+      "failed_login_attempts": 4,
+      "targeted_users": [
+        "root",
+        "admin"
+      ]
+    }
+  }
+]

@@ -1,0 +1,88 @@
+======================================================================
+  MINI SIEM v1 — INCIDENT REPORT
+  Generated: 2026-06-11 13:35:23
+======================================================================
+
+SUMMARY
+----------------------------------------
+  Total Log Events Ingested : 40
+  Total Alerts Generated    : 5
+  Critical Alerts           : 4
+  High Alerts               : 1
+  Medium Alerts             : 0
+  Low Alerts                : 0
+
+VERDICT BREAKDOWN
+----------------------------------------
+  HIGH CONFIDENCE THREAT              : 2
+  BRUTE FORCE CONFIRMED               : 1
+  CONFIRMED MALICIOUS                 : 1
+  BRUTE FORCE ATTEMPT                 : 1
+
+CRITICAL THREAT ACTORS
+----------------------------------------
+  IP: 192.168.1.50         | Country: CN    | Score:  39 | HIGH CONFIDENCE THREAT
+  IP: 185.220.101.42       | Country: NL    | Score:   8 | HIGH CONFIDENCE THREAT
+  IP: 203.0.113.77         | Country: Unknown | Score:  30 | BRUTE FORCE CONFIRMED
+  IP: 198.51.100.200       | Country: Unknown | Score:  91 | CONFIRMED MALICIOUS
+
+ALERT DETAILS
+----------------------------------------
+
+  [1] MULTI_VECTOR_ATTACK — CRITICAL
+      IP         : 192.168.1.50
+      Timestamp  : 2026-01-15T06:13:12
+      Threat Score : 100/100
+      Abuse Score  : 39
+      Country    : CN  |  ISP: Mock ISP (no API key)
+      Verdict    : HIGH CONFIDENCE THREAT
+      failed_login_attempts : 12
+      targeted_users       : ['root', 'ubuntu', 'admin']
+      correlated_signals   : ['BRUTE_FORCE', 'IP_FREQUENCY_SPIKE']
+      total_events         : 12
+
+  [2] MULTI_VECTOR_ATTACK — CRITICAL
+      IP         : 185.220.101.42
+      Timestamp  : 2026-01-15T06:15:23
+      Threat Score : 100/100
+      Abuse Score  : 8
+      Country    : NL  |  ISP: Mock ISP (no API key)
+      Verdict    : HIGH CONFIDENCE THREAT
+      failed_login_attempts : 12
+      targeted_users       : ['backup', 'user', 'www-data', 'test', 'postgres', 'git', 'docker', 'oracle', 'ftpuser', 'admin', 'deploy', 'jenkins']
+      correlated_signals   : ['BRUTE_FORCE', 'IP_FREQUENCY_SPIKE']
+      total_events         : 12
+
+  [3] BRUTE_FORCE — CRITICAL
+      IP         : 203.0.113.77
+      Timestamp  : 2026-01-15T07:05:20
+      Threat Score : 64/100
+      Abuse Score  : 30
+      Country    : Unknown  |  ISP: Mock ISP (no API key)
+      Verdict    : BRUTE FORCE CONFIRMED
+      failed_login_attempts : 6
+      targeted_users       : ['pi', 'ubuntu']
+
+  [4] BRUTE_FORCE — CRITICAL
+      IP         : 198.51.100.200
+      Timestamp  : 2026-01-15T08:00:06
+      Threat Score : 57/100
+      Abuse Score  : 91
+      Country    : Unknown  |  ISP: Mock ISP (no API key)
+      Verdict    : CONFIRMED MALICIOUS
+      failed_login_attempts : 3
+      targeted_users       : ['root']
+
+  [5] BRUTE_FORCE — HIGH
+      IP         : 10.10.10.99
+      Timestamp  : 2026-01-15T06:30:15
+      Threat Score : 36/100
+      Abuse Score  : 4
+      Country    : RU  |  ISP: Mock ISP (no API key)
+      Verdict    : BRUTE FORCE ATTEMPT
+      failed_login_attempts : 4
+      targeted_users       : ['root', 'admin']
+
+======================================================================
+  END OF REPORT
+======================================================================
